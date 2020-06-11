@@ -8,6 +8,7 @@ import { CartComponent } from './cart/cart.component';
 import { OderListComponent } from './oder-list/oder-list.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { RouterModule, Routes} from "@angular/router";
+import { ProfileComponent } from './profile/profile.component';
 
 const routes : Routes =[
   {
@@ -17,6 +18,10 @@ const routes : Routes =[
       {
         path: '',
         component: ProductListComponent
+      },
+      {
+        path: 'user-profile',
+        component: ProfileComponent
       },
       {
         path: 'cart',
@@ -36,7 +41,7 @@ const routes : Routes =[
 
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, LayoutComponent, ProductListComponent, CartComponent, OderListComponent, CheckoutComponent],
+  declarations: [HeaderComponent, FooterComponent, LayoutComponent, ProductListComponent, CartComponent, OderListComponent, CheckoutComponent, ProfileComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes)
